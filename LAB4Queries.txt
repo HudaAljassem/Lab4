@@ -1,0 +1,74 @@
+8 ?- house = house.
+true.
+
+9 ?- house = abc. 
+false.
+
+10 ?- edge(a,b) = edge(C,b).
+C = a.
+
+11 ?- edge(a,d) = edge(C,B).
+C = a,
+B = d.
+
+12 ?- edge(C,B) = edge(a,d).
+C = a,
+B = d.
+
+13 ?- edge(A,f(g,h)) = edge(a,B).
+A = a,
+B = f(g, h).
+
+14 ?- edge(A,A) = edge(b,c).
+false.
+
+15 ?- edge(A,A) = edge(b,b).
+A = b.
+
+16 ?- A = B, B = f.
+A = B, B = f.
+
+17 ?- A = B, B = f, A = e.
+false. 
+
+19 ?- consult(['c:/Users/hudaa/OneDrive/Desktop/family.pl']).
+true.
+
+20 ?- female(X).
+X = sara .
+
+21 ?- female(X).
+X = sara 
+Unknown action: : (h for help)
+Action? .
+
+21 ?- female(X).
+X = sara 
+Unknown action: : (h for help)
+Action? .
+
+21 ?- female(X).
+X = sara ;
+X = nora.
+
+21 ?- male(X).
+X = ali .
+
+22 ?- parent(X, Y), parent(Y, faisal).
+X = ali,
+Y = muhammad .
+
+23 ?- parent(ahmad, X), female(X).
+X = sara 
+Unknown action: C (h for help)
+Action? .
+
+24 ?- parent(ahmad, X), female(X).
+X = sara ;
+X = nora .
+
+24 ?- parent(P, ahmad), parent(P, muhammad).
+P = ali.
+
+25 ?- parent(P, khan), parent(P, nora), male(khan).
+P = ahmad.
